@@ -24,7 +24,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t miruthu/cicd:${{ github.sha }} .
+          docker build -t miruthu/cicd:${{ github.sha }} ./react-profile-main
           docker tag miruthu/cicd:${{ github.sha }} miruthu/cicd:latest
 
       - name: Push Docker Images
